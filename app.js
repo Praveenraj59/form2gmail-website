@@ -1,13 +1,13 @@
 function sendEmail() {
   Email.send({
-    Host : "smtp.gmail.com",
-    Username : "praveenpaulraj59@gmail.com",
-    Password : ".102013.",
-    To : '211501067@rajalakshmi.edu.in',
-    From : document.getElementById("email").value,
-    Subject : "This is the subject",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
+      SecureToken : "cda5bade-3bc4-43b9-94d0-1ee22736890b",
+      To: "praveenpaulraj59@gmail.com",
+      From: "praveenpaulraj59@gmail.com" ,
+      Subject: "Enquiry from " + document.getElementById("name").value,
+      Body: "Name :" +document.getElementById("name").value +
+      " <br> Email :" +document.getElementById("email").value +
+      " <br> Message :" +document.getElementById("message").value
+  }).then(
+      message => alert(message)
+  );
 }
